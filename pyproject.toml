@@ -1,22 +1,23 @@
 [build-system]
-requires = ["setuptools>=61", "setuptools.scm"]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project]
 # name it as your package name
-name = "quanttide-template-of-python-project"
+name = "fastapi-quanttide-comm"
 # semetric versions
 version = "0.1.0-alpha.1"
 # describe the package within one sentence
-description = "QuantTide Template of Python Project"
+description = "FastAPI SDK for QuantTide Commerce"
 authors = [{name = "QuantTide Inc.", email = "opensource@quanttide.com"}]
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
-requires-python = '>=3'
+requires-python = '>=3.8'
 dependencies = [
+    "fastapi>=0.109.2",
+    "pydantic>=2.6.1",
 ]
-# dynamic = ["version"]
 
 [project.license]
 # create your license and name it as "LICENSE"
@@ -25,3 +26,13 @@ file = "LICENSE"
 [project.readme]
 file = "README.md"
 content-type = "text/markdown"
+
+[tool.pdm.build]
+includes = [
+    "fastapi_quanttide_comm",
+]
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest>=8.0.1",
+]
