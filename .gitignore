@@ -143,3 +143,4 @@ cython_debug/
 # IDE
 .vscode/
 .idea/
+/.pdm-build/
