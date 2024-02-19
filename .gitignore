@@ -96,6 +96,7 @@ Pipfile.lock
 
 # PDM
 .pdm-python
+.pdm-build/
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow
 __pypackages__/
@@ -143,4 +144,4 @@ cython_debug/
 # IDE
 .vscode/
 .idea/
-/.pdm-build/
+
